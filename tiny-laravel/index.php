@@ -1,6 +1,7 @@
 <?php
 require './vendor/autoload.php';
 use FuJiangSun\TinyLaravel\Application\Application;
+use FuJiangSun\TinyLaravel\Facades\DB;
 
 //echo DB::demo();
 
@@ -20,6 +21,8 @@ use FuJiangSun\TinyLaravel\Application\Application;
 // 契约 -》为了约束我们的服务
  $db = $app->make(FuJiangSun\TinyLaravel\Contracts\Databases\DB::class);
  var_dump($db->demo()) ;
+ $res = DB::demo();
+ var_dump($res);
 
 // 在一个类中，如果调用某一个类中不存在的方法的时候 那会执行那个魔术
 // 如果是静态方式
